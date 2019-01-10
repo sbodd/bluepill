@@ -1,5 +1,5 @@
 /* main.c
- * Copyright (C) 2018 Subhendu Biswas <sbodd05@gmail.com>
+ * Copyright (C) 2019 Subhendu Biswas <sbodd05@gmail.com>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -40,7 +40,6 @@ void vTask2(void *pvParameters);
 static void prvSetupHardware(void);
 static void prvSetupUart(void);
 
-void delay(unsigned long int);
 void uartPutchar(unsigned char);
 void printMsg(char *);
 
@@ -137,14 +136,6 @@ void printMsg(char *ptr)
                 uartPutchar(*ptr);
                 *ptr++;
         }
-}
-
-void delay(unsigned long int tm)
-{
-	volatile unsigned long int i,j;
-
-	for(i=0;i<tm;i++)
-	 for(j=0;j<10000;j++);
 }
 
 #ifdef USE_FULL_ASSERT
