@@ -65,24 +65,22 @@ int main(void)
 
 void vTask1(void *pvParameters)
 {
-	const TickType_t xDelay = 200 / portTICK_PERIOD_MS;
         /* As per most tasks, this task is implemented in an infinite loop. */
         for( ;; )
         {
-		printMsg("This is Task-1\n\r");
-		vTaskDelay(xDelay);
+		printMsg("This is Task-1\r\n");
+		vTaskDelay(500);
         }
 }
 /*-----------------------------------------------------------*/
 
 void vTask2(void *pvParameters)
 {
-	const TickType_t xDelay = 500 / portTICK_PERIOD_MS;
         /* As per most tasks, this task is implemented in an infinite loop. */
         for( ;; )
         {
-		printMsg("This is Task-2\n\r");
-		vTaskDelay(xDelay);
+		printMsg("This is Task-2\r\n");
+		vTaskDelay(200);
         }
 }
 

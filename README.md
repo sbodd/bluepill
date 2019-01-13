@@ -16,5 +16,6 @@ This source is tested with the following hardware :
  1. install the toolchain and libarary.
  2. change the TOOLROOT path in Makefile.common
  3. change arm-none-eabi-objcopy path in mkdump.sh
- 4. run bash mkdump.sh (it will compile and flash final binary to bluepill)
+ 4. run bash mkdump.sh (it will compile and flash final binary to bluepill, will 
+    ask for root password while flashing)
  5. go to app dir and type make clean to remove generated bins and object files

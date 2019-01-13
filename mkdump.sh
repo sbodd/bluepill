@@ -4,6 +4,8 @@
 APPLOC="$PWD/Src/FreeRTOS-hello"
 
 cd $APPLOC
+echo "current dir : $APPLOC "
+
 INPFL=`pwd | sed -n 's/.*\(Src[/][a-zA-Z0-9_-]*\).*/\1/p' | cut -d '/' -f2`
 
 echo -e "compiling ...\n"
@@ -16,6 +18,6 @@ $HOME/Downloads/gcc-arm-none-eabi-7-2018-q2-update/bin/arm-none-eabi-objcopy -Ob
 echo -e "conversion done\n"
 
 echo -e "now writing to flash ...\n "
-sudo $PWD/flashTool/st-flash write $INPFL.bin 0x08000000
+sudo $APPLOC/../../flashTool/st-flash write $INPFL.bin 0x08000000
 
 cd -

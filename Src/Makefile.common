@@ -1,5 +1,5 @@
 # Project root file
-PROJROOT=$(CURDIR)
+PROJROOT=$(CURDIR)/../..
 
 # Cross Toolchain path, change this accordingly
 TOOLROOT=$(HOME)/Downloads/gcc-arm-none-eabi-7-2018-q2-update/bin
